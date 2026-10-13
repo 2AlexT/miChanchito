@@ -1,0 +1,27 @@
+// Primera evaluacion - modelo persistente actual (Room / SQLite)
+// Puede abrirse en https://dbdiagram.io
+
+Project PrimeraEvaluacion {
+  database_type: 'SQLite'
+  Note: 'El proyecto declara dos bases Room separadas. Actualmente no existen claves foraneas entre sus tablas.'
+}
+
+Table historial {
+  id integer [pk, increment]
+  tipo varchar [not null, note: 'DISPOSITIVO | GPS']
+  titulo varchar [not null]
+  descripcion varchar [not null]
+  fecha integer [not null, note: 'Marca de tiempo Unix en milisegundos']
+
+  Note: 'Pertenece a BaseDatosApp (evaluacion_movil_db).'
+}
+
+Table transacciones {
+  id integer [pk, increment]
+  titulo varchar [not null]
+  montoEnCentavos integer [not null]
+  tipo varchar [not null, note: 'INGRESO | GASTO']
+  creadaEn integer [not null, note: 'Marca de tiempo Unix en milisegundos']
+
+  Note: 'Pertenece a BaseDatosCentavo. Este modulo todavia no esta conectado a la navegacion principal.'
+}

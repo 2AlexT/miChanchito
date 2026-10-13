@@ -1,0 +1,25 @@
+*.iml
+.gradle/
+.kotlin/
+/local.properties
+/.idea/
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Documentacion local excluida de GitHub por solicitud del propietario.
+*.md
+
+# Material auxiliar de referencia; nunca debe publicarse en este repositorio.
+EXTRAS_HELP/
+**/EXTRAS_HELP/
